@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  background-color: #FCFAE1;
+}
+
+header {
+  background-color: #F6E497;
+  font: 16px "Verdana", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#login{
+  background-color: #BD8D46;
+  font: 24px "Verdana", sans-serif;
+  padding-left: 31px;
+  padding-right: 31px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 36px;
+  margin-right: 18px;
+  margin-bottom: 9px;
+  float: right;
+  color: #4C1B1B;
+  border: none;
+  transition: background-color .2s ease-in-out;
+}
+
+#login:hover{
+  background-color: #B9121B;
+  cursor: pointer;
+}
+
+#logo {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  margin-left: 27px;
+}
+
+#sidebar{
+  margin-left: 27px;
+  margin-top: 45px;
+  display: block;
+  float: left;
+}
+
+.sidebartimeline{
+  background-color: #BD8D46;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.sidebartimeline h2{
+  font: bold 18px "Verdana", sans-serif;
+  background-color: #493636;
+  color: #E6E6E6;
+  text-align: center;
+  padding-top: 13.5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 18px;
+  margin-right: 18px;
+  width: 171px;
+  height: 44.5px;
+}
+
+.sidebartimeline div{
+  color: #BD8D46;
+  height: 81px;
+}
+
+#next {
+  margin: 27px 5px;
+  border: none;
+  outline: 5px solid #4C1B1B;
+  background-color: #B9121B;
+  color: #E6E6E6;
+  font: bold 27px "Verdana";
+  height: 54px;
+  width: 202px;
+  transition: background-color .2s ease-in-out;
+}
+
+#next:hover{
+  background-color: #4C1B1B;
+  cursor: pointer;
+}
+
+.slideshow{
+  background-color: #F6E497;
+  display: block;
+  float: left;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+p {
+  background-color: #F4EDD0;
+  color: #4C1B1B;
+  font: 18px "Verdana", sans-serif;
+  margin-top: 45px;
+  padding: 9px;
+  display: block;
+  float: left;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 21px;
+  background-color: #F6E497;
+}
+
+#content {
+  /* margin-left: 45px;
+  margin-top: 45px; */
+  margin: 45px;
+  width: 638px;
+  display: block;
+  float: left;
+
+}
+
+.suggestions {
+
+}
+
+.suggestionItem{
+  color: #4C1B1B;
+  background-color: #F4E9B8;
+  font: italic 20px "Verdana", sans-serif;
+  display: block;
+  float: left;
+  padding: 9px 9px;
+  margin: 0px 0px 0px 0px;
+}
+
+.suggestionItem h3{
+  background-color: #BCA484;
+  padding: 0px 27px 0px 27px;
+  margin: 0px 0px 5px 0px;
+}
+
+.selectionGroup {
+  display: block;
+  float: left;
+  min-width: 638px;
+  margin-left: 40px;
+}
+
+ul{
+  padding: 0px 25px 0px 25px;
+  margin: 0px 50px 0px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.selImag{
+  margin: 0 ;
+  display: inline-block;
+  width: 66.5px;
+  height: 66.5px;
+}
+
+.selImagNum{
+  margin: 0 ;
+  display: inline-block;
+  height: auto;
+  margin-top: 9.5px;
+}
+
+li {
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  background-color: #BCA382;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 5px 5px #4C1B1B;
+  height: 66.5px;
+  width: 66.5px;
+}
+
+li:hover {
+  background-color:#BD8D46
+}
+
+#selectionPage h1 {
+  font: bold 24px "Verdana", sans-serif;
+  color: #4C1B1B;
+  display: block;
+  float: left;
+}
+
+#selectionPage{
+  margin-top: 45px;
+}
+
+hr {
+  display: block;
+  float: left;
+  margin: 35px;
+  width: 638px;
+  border: none;
+  height: 2pt;
+  background-color: black;
+}
+
+p.checkout {
+  margin: 0;
+  padding: 25px 25px 100px 25px;
+  width: 100%;
+}
+
+form {
+  background-color: #F4EDD0;
+  color: #4C1B1B;
+  font: 18px "Verdana", sans-serif;
+  margin-top: 45px;
+  padding: 25px;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+input {
+  background-color: #CCCCCC;
+  border: none;
+  height: 18px;
+  width: 100%;
+  display: block;
+  float: left;
+}
+
+#cardNum{
+  width: 289px;
+}
+
+#expiry{
+  width: 117px;
+  padding-left: 54px;
+  padding-right: 81px;
+}
+
+#ccv{
+  width: 54px;
+  float: right;
+  padding-right: 0;
+}
+
+#phone{
+  width: 100%;
+}
+
+.payment div{
+  display: inline-block;
+  float: left;
+  padding-right: 10px;
+  padding-top: 10px;
+}
