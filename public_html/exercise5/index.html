@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Conference Registration</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+  <h1>Interactive Design Conference</h1>
+
+  <form class="" action="thanks.html" method="post">
+
+    <fieldset name="personal" id="personal">
+      <label for="firstName">First Name:</label>
+      <input type="text" name="firstName" id="firstName"> <br>
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" name="lastName" id="lastName"> <br>
+
+      <hr>
+
+      <label for="addressLine1">Address Line 1:</label>
+      <input type="text" name="addressLine1" id="addressLine1"><br>
+      <label for="addressLine2">Address Line 2:</label>
+      <input type="text" name="addressLine2" id="addressLine2"><br>
+
+      <label for="city">City:</label>
+      <input type="text" name="city" id="city" maxlength="24"><br>
+      <label for="state">State:</label>
+      <input type="text" name="state" id="state" maxlength="2"><br>
+      <label for="addressLine2">Zip Code:</label>
+      <input type="text" name="zip" id="zip" maxlength="10">
+      <br><hr>
+    </fieldset>
+
+    <fieldset name="details" id="details">
+      <div>
+      <label for="type">Select Session(s):</label>
+      <label for="html5">HTML5
+      <input type="checkbox" name="type" id="html5"><br></label>
+      <label for="CSS3">CSS3
+      <input type="checkbox" name="type" id="CSS3"><br></label>
+      <label for="javascript">Javascript
+      <input type="checkbox" name="type" id="javascript"><br></label>
+      </div>
+
+      <div>
+      <label for="loc">Select Location:</label>
+      <label for="usa">USA
+      <input type="radio" name="loc" id="usa"><br></label>
+      <label for="london">London
+      <input type="radio" name="loc" id="london"><br></label>
+      <label for="tokyo">Tokyo
+      <input type="radio" name="loc" id="tokyo"><br></label>
+      </div>
+
+    </fieldset>
+
+    <input type="submit" name="submit" value="Sumbit">
+  </form>
+
+</body>
+</html>
