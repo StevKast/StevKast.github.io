@@ -1,0 +1,46 @@
+.inactiveMonth {
+  background-color: #eeeeee;
+}
+
+table {
+  width: 75%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th{
+  border: solid 1px;
+  width: 100px;
+  padding: 10px;
+  background-color: #b8faa6;
+}
+
+td{
+  text-align: center;
+  height: 100px;
+  background-color: #effeeb;
+  transition: background-color .2s ease-in-out;
+
+  border: solid 1px #bbbbbb;
+}
+
+#thanksgiving:hover{
+  background-color: #83beff;
+}
+
+.break{
+  background-color: #ebf4fe;
+}
+
+caption {
+  background-color: #cccccc;
+  padding: 20px;
+  font: bold 22px "Verdana";
+  border-radius: 25px 25px 0px 0px;
+  border: solid 1px;
+}
+
+body {
+  font-family: sans-serif;
+  color: #555555;
+}
