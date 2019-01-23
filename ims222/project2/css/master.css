@@ -27,14 +27,14 @@ header{
   transition: background-color 0.25s;
 }
 
-nav {
+.topnav {
   display: flex;
   align-items: stretch;
   background-color: #92CDCF;
   max-height: 80px;
 }
 
-h1{
+a{
   text-align: center;
   font-size: 3em;
   width: 100%;
@@ -43,8 +43,43 @@ h1{
   height: 100%;
   border: solid 1px;
   transition: background-color 0.25s;
+  text-decoration: none;
+  color: inherit;
 }
 
-h1:hover{
+a:hover{
   background-color: #ddd;
+}
+
+.active{
+  background-color: rgb(161, 161, 161);
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a{display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav_responsive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #92CDCF;
+  }
+  .topnav_responsive .icon {
+    
+  }
+
+  .topnav_responsive a{
+
+  }
 }
