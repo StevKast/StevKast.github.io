@@ -1,7 +1,8 @@
 body{
   background-color: #31353d;
+  color:  #EEEFF7;
   margin: 0;
-  font: 10px "Verdana", sans-serif;
+  font: 100% "Verdana", sans-serif; /*10 / 750 = 0.01333*/
 }
 
 header{
@@ -15,9 +16,11 @@ header{
   padding: 10px;
 }
 
-#mainLogo:hover {
-  background-color: #31353d;
-
+#headerImages a{
+  border: none;
+}
+#headerImages a:hover{
+  background-color: inherit;
 }
 
 #mainLogo {
@@ -27,28 +30,64 @@ header{
   transition: background-color 0.25s;
 }
 
-.topnav {
+footer{
+  background-color: #445878;
+  width: 100%;
   display: flex;
-  align-items: stretch;
-  background-color: #92CDCF;
-  max-height: 80px;
+  flex-direction: column;
+}
+
+img{
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+}
+
+p{
+  background-color: #1C1D21;
+  color: #EEEFF7;
+  font: 1.25em "Verdana", sans-serif; /*20px / 16px = */
+  text-indent: 2em;
+  padding: .66667%;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 2.66667% 2.66667% 2.66667%;
+  max-width: 900px;
+  margin: auto;
 }
 
 a{
   text-align: center;
-  font-size: 3em;
+  font-size: 1.875em;
   width: 100%;
   max-height: 80px;
-  margin: auto 0;
-  height: 100%;
-  border: solid 1px;
+  height: 62px;
+  border-color: #31353D;
+  border-left: solid 1px;
+  border-right: solid 1px;
   transition: background-color 0.25s;
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
+  color: #1C1D21;
+  line-height: 1.875em;
 }
 
 a:hover{
   background-color: #ddd;
+}
+
+/* Navigation */
+
+.topnav{
+  display: flex;
+  align-items: center;
+  background-color: #92CDCF;
+  max-height: 80px;
 }
 
 .active{
@@ -57,6 +96,7 @@ a:hover{
 
 .topnav .icon {
   display: none;
+  height: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -76,10 +116,52 @@ a:hover{
     background-color: #92CDCF;
   }
   .topnav_responsive .icon {
-    
-  }
-
-  .topnav_responsive a{
 
   }
+
+  .topnav_responsive a {
+    border-color: #31353D;
+    border: solid 1px;
+  }
+}
+
+/* Homepage tour preview */
+
+.tourPreview{
+  background-color: #1C1D21;
+  color: #EEEFF7;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 18.7406%;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.tourDate{
+ margin: 1.40845%; /* 10px / 710px*/
+ padding: 0.56338%;
+ background-color: #31353d;
+ width: 47.8873%;
+}
+
+.tourDate h2{
+  margin: 0;
+  font-size: 1.3125em; /* 21px / 16px = 1.3125*/
+  font-weight: bold;
+}
+
+.tourDate h3{
+  margin: 0;
+  font-size: 1.125em; /* 18px / 16px = 1.125*/
+  font-weight: normal;
+  color: #92CDCF;
+}
+
+.tourDate h4{
+  margin: 0;
+  font-size: 1.125em; /* 18px / 16px = 1.125*/
+  font-weight: normal;
+  font-style: italic;
 }
