@@ -187,6 +187,29 @@ a:hover{
   height: auto;
 }
 
+.tourDates{
+  background-color: #1C1D21;
+  color: #EEEFF7;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  max-height: 18.7406%;
+  height: auto;
+}
+
+.tourDates .tourDate{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tourDates .tourDate h3{
+  font-size: 1.3125em;
+}
+
+.tourDates .tourDate h4{
+  font-size: 1.3125em;
+}
+
 .tourDate{
  margin: 1.40845%; /* 10px / 710px*/
  padding: 0.56338%;
