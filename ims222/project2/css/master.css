@@ -269,3 +269,26 @@ h5{
   font-style: italic;
   margin: 0;
 }
+
+.content-video{
+padding: 0 0 70px 0;
+}
+
+.video-container{
+  background-color: #1C1D21;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 20px 0 20px 0;
+}
+
+iframe{
+  margin: 10px 0 10px 0;
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  padding-right:1.4084507%;
+}
+
+.videoInfo{
+  padding-left: 1.4084507%;
+}
