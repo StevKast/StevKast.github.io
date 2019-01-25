@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oliver Heldens</title>
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <div id="headerImages">
+      <a href="index.html" style="line-height:0px;"><img id="mainLogo" src="imgs/logo.png" alt=""></a>
+    </div>
+    <nav class="topnav" id="topNav">
+      <a href="javascript:void(0);" class="icon" onclick="getResponsive()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html">Home</a>
+      <a href="tour.html">Tour</a>
+      <a href="story.html">Story</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="pastshows.html" style="line-height:0.9375em">Past<br>Shows</a>
+    </nav>
+
+    <script>
+      function getResponsive() {
+        var x = document.getElementById("topNav");
+        if (x.className === "topnav") {
+          x.className += "_responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </header>
+
+  <section class="content">
+    <h1>Thank You!</h1>
+    <a href="#">Home</a>
+    <a href="#">Past Shows</a>
+
+    <div class='push'></div>
+  </section>
+
+
+
+  <footer>
+    <div class="">
+      Sponsors:<br>
+      <img style="width:190px" src="imgs/Heldeep_Records_wordmark.jpg" alt="">
+    </div>
+    <div class="">
+      <img style="width:52px" src="imgs/MarqueeLogo.jpeg" alt="">
+    </div>
+    <div class="">
+      <img style="width:47px" src="imgs/Spinnin'_Records_logo.svg" alt="">
+    </div>
+
+  </footer>
+
+</body>
+</html>

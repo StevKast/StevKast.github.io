@@ -3,13 +3,18 @@ body{
   color:  #EEEFF7;
   margin: 0;
   font: 100% "Verdana", sans-serif; /*10 / 750 = 0.01333*/
+  min-height: 100%;
 }
+
+/* Header styles */
 
 header{
   background-color: #445878;
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
 }
 
 #headerImages {
@@ -30,17 +35,32 @@ header{
   transition: background-color 0.25s;
 }
 
+/* Footer Styles */
+
 footer{
   background-color: #445878;
   width: 100%;
   height: 70px;
-  display: block;
+  display: flex;
   flex-direction: row;
+  font-style: italic;
+  font-size: 0.625em; /* 10px / 16px = 0.625*/
+  line-height: 2em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+footer div{
+  margin: 6px 4px;
 }
 
 footer img{
   height: auto;
 }
+
+
+/* Other Styles */
 
 img{
   max-width: 900px;
@@ -60,9 +80,34 @@ p{
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px 2.66667% 2.66667% 2.66667%;
+  padding: 20px 2.66667% 70px 2.66667%;
   max-width: 900px;
   margin: auto;
+}
+
+.content a{
+  color: #1C1D21;
+  background-color: #92CDCF;
+  border: none;
+  max-width: 69.295%;
+  height: 114px;
+  margin: 2.112676%;
+  font-weight: bold;
+  font-size: 10vw;
+  line-height: 1em;
+}
+
+@media (min-width:710px) {
+  .content a {
+    font-size: 72px;
+    height: auto;
+  }
+}
+
+.content h1{
+  font-size: 4.5em;
+  margin: 11.267%;
+  text-align: center;
 }
 
 a{
@@ -104,7 +149,7 @@ a:hover{
   height: auto;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 710px) {
   .topnav a{display: none;}
   .topnav a.icon {
     float: right;
@@ -112,7 +157,7 @@ a:hover{
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 710px) {
   .topnav_responsive {
     position: relative;
     display: flex;
