@@ -312,6 +312,7 @@ input, select{
   height: 2.5em;
   width: 100%;
   margin: 2.5px 0;
+  padding: 0 1% 0 1%;
 }
 
 button{
