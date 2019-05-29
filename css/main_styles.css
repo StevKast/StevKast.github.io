@@ -40,6 +40,18 @@ body, html{
   background-image: url(../imgs/white_sand.png);
 }
 
+h2 {
+  color: #dddddd;
+}
+
 #nameTitle{
   font-weight: bolder;
+}
+
+.card-header {
+  background-image: url(../imgs/gray_sand.png);
+}
+
+.card-body{
+  background-image: url(../imgs/white_sand.png);
 }
