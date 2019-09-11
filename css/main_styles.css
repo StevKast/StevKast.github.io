@@ -48,10 +48,10 @@ h2 {
   font-weight: bolder;
 }
 
-.card-header {
+.card-header{
   background-image: url(../imgs/gray_sand.png);
 }
 
-.card-body{
+.card-body, .list-group-item {
   background-image: url(../imgs/white_sand.png);
 }
