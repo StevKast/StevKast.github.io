@@ -3,6 +3,8 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
+@use "app/theming/" as app;
+@use "sass:map";
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -13,14 +15,14 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $stevenkast-primary: mat.define-palette(mat.$indigo-palette);
-$stevenkast-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$stevenkast-accent: mat.define-palette(app.$gdp-palette);
 
 // The warn palette is optional (defaults to red).
 $stevenkast-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$stevenkast-theme: mat.define-light-theme((
+$stevenkast-theme: app.define-dark-theme((
   color: (
     primary: $stevenkast-primary,
     accent: $stevenkast-accent,

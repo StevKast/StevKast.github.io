@@ -1,0 +1,44 @@
+@import '../../theming/mixins';
+
+.content {
+    width: 100%;
+    position: relative;
+}
+
+$projects-color: #6002ee;
+$printer-color: #71F1A2;
+$resume-color: #4DD0E1;
+$server-color: #F4FF81;
+
+.landing-button-tiles {
+    width: 100%;
+}
+
+.landing-button-row {
+}
+
+.landing-button {
+    width: 25vw;
+    aspect-ratio: 16/9;
+    margin: 1rem;
+    left: 25vw;
+    transform: translate(0, 50%);
+}
+
+@mixin landingButtonColors($color) {
+    border-color: $color;
+    &:hover {
+        background-color: rgba($color, 0.025);
+    }
+}
+
+.landing-button-row:nth-child(1n){
+    .landing-button:nth-child(1n) { @include landingButtonColors($projects-color);}
+    .landing-button:nth-child(2n) { @include landingButtonColors($printer-color);}
+}
+
+.landing-button-row:nth-child(2n){
+    .landing-button:nth-child(1n) { @include landingButtonColors($resume-color);}
+    .landing-button:nth-child(2n) { @include landingButtonColors($server-color);}
+}
+
