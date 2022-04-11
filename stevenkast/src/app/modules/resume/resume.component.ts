@@ -15,9 +15,10 @@ export class ResumeComponent implements OnInit {
       date: 'August 2020 - Current',
       location: 'Cleveland, Ohio',
       bullets: [
-        'Developed a full-stack application that reduced a daily task from 1 - 2 hours to 5 minutes',
-        'Created deployment pipelines using Concourse to automate builds, testing, and execution',
-        'Technologies Used: Java, Java Spring, SQL, Angular (and AngularJS), Concourse Pipelines, and Git'
+        'Migrated legacy payments system to new full-stack Angular and .NET Core apps on a scrum team',
+        'Implemented search functionality that reduced wrong payments in our app that processes $35b/yr',
+        'Improved accessibility through feedback from user usability studies',
+        'Participated in on-call support rotation for a business-critical application'
       ]
     },
     {
