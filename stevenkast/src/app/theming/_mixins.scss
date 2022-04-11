@@ -1,11 +1,22 @@
-@mixin absoluteCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+@use "sass:color";
 
-  @mixin redOut {
-    color: #ff0000;
-    background-color: #990000;
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin redOut {
+  color: #ff0000;
+  background-color: #990000;
+}
+
+@mixin customButtonColor($color) {
+  border-color: $color;
+  color: color.scale($color, $lightness: 80%);
+
+  &:hover {
+    background-color: rgba($color, 0.025);
   }
+}

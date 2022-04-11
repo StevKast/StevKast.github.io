@@ -4,6 +4,7 @@ import { ResumeComponent } from './resume.component';
 import { SharedModule } from '../shared';
 import { ResumeWorkItemComponent } from './resume-work-item/resume-work-item.component';
 import { ResumeTechItemComponent } from './resume-tech-item/resume-tech-item.component';
+import { ResumeSchoolComponent } from './resume-school/resume-school.component';
 
 
 
@@ -11,7 +12,8 @@ import { ResumeTechItemComponent } from './resume-tech-item/resume-tech-item.com
   declarations: [
     ResumeComponent,
     ResumeWorkItemComponent,
-    ResumeTechItemComponent
+    ResumeTechItemComponent,
+    ResumeSchoolComponent
   ],
   imports: [
     CommonModule,

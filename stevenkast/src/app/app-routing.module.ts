@@ -4,15 +4,10 @@ import { HomeComponent } from './modules/home/home.component';
 import { ResumeComponent } from './modules/resume/resume.component';
 
 const routes: Routes = [
-  {
-    path: 'resume',
-    component: ResumeComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
+  { path: 'resume', component: ResumeComponent },
+  { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

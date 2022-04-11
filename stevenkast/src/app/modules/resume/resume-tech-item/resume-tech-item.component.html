@@ -1,1 +1,15 @@
-<p>resume-tech-item works!</p>
+<mat-card>
+    <mat-list>
+        <mat-list-item *ngFor="let item of languages">
+            <si [icon]="item.icon"></si> {{item.name}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngFor="let item of tech">
+            <si [icon]="item.icon"></si> {{item.name}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngFor="let item of principles">
+            {{item}}
+        </mat-list-item>
+    </mat-list>
+</mat-card>

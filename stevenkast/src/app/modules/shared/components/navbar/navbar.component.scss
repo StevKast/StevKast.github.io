@@ -1,7 +1,28 @@
+@import '../../../../theming';
+
 .spacer {
     flex: 1 1 auto;
 }
 
-mat-icon {
-    flex-basis: 2em;
+button {
+    margin-right: 1em;
+}
+
+
+
+
+button:nth-last-child(4) {
+    @include customButtonColor($projects-color);
+}
+
+button:nth-last-child(3) {
+    @include customButtonColor($printer-color);
+}
+
+button:nth-last-child(2) {
+    @include customButtonColor($resume-color);
+}
+
+button:nth-last-child(1) {
+    @include customButtonColor($server-color);
 }
