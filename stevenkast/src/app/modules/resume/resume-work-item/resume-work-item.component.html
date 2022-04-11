@@ -1,0 +1,20 @@
+<mat-card class="resume-card">
+    <mat-card-title-group>
+        <mat-card-title>{{workItem.name}}</mat-card-title>
+        <mat-card-subtitle>
+            <div>{{workItem.role}}</div>
+            <div>{{workItem.location}} | May 2019 - August 2019</div>
+        </mat-card-subtitle>
+        <img mat-card-md-image src={{workItem.img}}>
+    </mat-card-title-group>
+    <mat-card-content>
+        <mat-list>
+            <div *ngFor="let bullet of workItem.bullets">
+                <mat-list-item>
+                    {{bullet}}
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
