@@ -13,6 +13,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
   PROJECT_ID: stevenkast
+  SERVICE: stevenkast-personalsite
 
 jobs:
   build-and-push-image:
@@ -70,13 +71,13 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ github.repository }}:${{ github.sha }} ${{ github.ref_name }}
-          docker push gcr.io/${{ env.PROJECT_ID }}/${{ github.repository }}:${{ github.sha }}
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }} ${{ github.ref_name }}
+          docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}
 
       - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v0
         with:
-          image: gcr.io/stevenkast/${{ github.repository }}:${{ github.ref_name }}
+          image: gcr.io/stevenkast/${{ env.SERVICE }}:${{ github.ref_name }}
           service: stevenkast-prod
           region: us-east4
