@@ -24,5 +24,6 @@ FROM nginx:latest
 # Copy the build output to replace the default nginx contents.
 COPY --from=build /usr/local/app/dist/stevenkast /usr/share/nginx/html
 
-# Expose port 80
+# Expose port 8080
+EXPOSE 8080
 EXPOSE 80
