@@ -4,7 +4,11 @@ mat-card {
     margin: 1em;
 }
 
-#email {
+#email a {
+    width: 100%;
+}
+
+#email button {
     color: map-get($map: $slate-palette, $key: 900);
     background-color: map-get($map: $grn-palette, $key: 900);
     width: 100%;
@@ -24,7 +28,6 @@ si {
 #socials {
     margin-top: 1em;
     text-decoration: none;
-
 }
 
 a {
