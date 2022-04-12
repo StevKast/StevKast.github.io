@@ -12,6 +12,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  PROJECT_ID: stevenkast
 
 jobs:
   build-and-push-image:
@@ -45,11 +46,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Show Output
-        run: echo ${{  env.REGISTRY }} ${{ env.IMAGE_NAME }} ${{ steps.meta.outputs.tags }}
-
-  cloud-run-deploy:
-    needs: [build-and-push-image]
+  cloud-run-build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: "read"
@@ -62,6 +59,19 @@ jobs:
         with:
           workload_identity_provider: "projects/727473316245/locations/global/workloadIdentityPools/ci-cd-pool/providers/my-provider"
           service_account: "iam-service-account@stevenkast.iam.gserviceaccount.com"
+
+      - name: Setup Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+
+      - name: Authorize Docker push
+        run: gcloud auth configure-docker
+
+      - name: Build and Push Container
+        run: |-
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }} ${{ github.ref_name }}
+          docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}
 
       - name: Deploy to Cloud Run
         id: deploy
