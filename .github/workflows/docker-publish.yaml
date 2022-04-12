@@ -64,6 +64,6 @@ jobs:
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v0
         with:
-          image: gcr.io/stevkast/${{ env.IMAGE_NAME }}:${{ build-and-push-image.steps.meta.outputs.tags }}
+          image: gcr.io/stevkast/${{ env.IMAGE_NAME }}:${{ jobs.build-and-push-image.steps.meta.outputs.tags }}
           service: stevenkast-prod
           region: us-east4
