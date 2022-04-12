@@ -58,12 +58,11 @@ jobs:
         with:
           workload_identity_provider: "projects/727473316245/locations/global/workloadIdentityPools/ci-cd-pool/providers/my-provider"
           service_account: "iam-service-account@stevenkast.iam.gserviceaccount.com"
-          token_format: "access_token"
 
       - name: Deploy to Cloud Run
         id: deploy
         uses: google-github-actions/deploy-cloudrun@v0
         with:
-          image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          image: gcr.io/stevkast/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tags }}
           service: stevenkast-prod
           region: "us-east4"
