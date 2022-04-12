@@ -58,6 +58,7 @@ jobs:
         with:
           workload_identity_provider: "projects/727473316245/locations/global/workloadIdentityPools/ci-cd-pool/providers/my-provider"
           service_account: "iam-service-account@stevenkast.iam.gserviceaccount.com"
+          token_format: "access_token"
 
       - name: Deploy to Cloud Run
         id: deploy
