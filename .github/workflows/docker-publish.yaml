@@ -48,6 +48,9 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
+      - name: Show Output
+        run: echo ${{  env.REGISTRY }} ${{ env.IMAGE_NAME }} ${{ steps.meta.outputs.tags }}
+
   cloud-run-deploy:
     needs: [build-and-push-image]
     runs-on: ubuntu-latest
