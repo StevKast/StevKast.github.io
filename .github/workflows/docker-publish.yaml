@@ -21,13 +21,29 @@ jobs:
     permissions:
       contents: read
       packages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Log in to the Container registry
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      # G Cloud auth
+      - id: "auth"
+        uses: "google-github-actions/auth@v0"
+        with:
+          workload_identity_provider: "projects/727473316245/locations/global/workloadIdentityPools/ci-cd-pool/providers/my-provider"
+          service_account: "iam-service-account@stevenkast.iam.gserviceaccount.com"
+          token_format: "access_token"
+
+      - name: Log in to gcr.io (Google)
+      - uses: "docker/login-action@v1"
+        with:
+          registry: "gcr.io"
+          username: "oauth2accesstoken"
+          password: "${{ steps.auth.outputs.access_token }}"
+
+      - name: Log in to ghcr.io (GitHub)
+        uses: docker/login-action@v1
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
@@ -44,35 +60,10 @@ jobs:
         with:
           context: stevenkast/.
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            ${{ steps.meta.outputs.tags }}
+            gcr.io/stevenkast/${{ env.SERVICE }}:${{ github.ref_name }}
           labels: ${{ steps.meta.outputs.labels }}
-
-  cloud-run-build-and-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: "read"
-      id-token: "write"
-
-    steps:
-      - uses: actions/checkout@v3
-      - id: "auth"
-        uses: "google-github-actions/auth@v0"
-        with:
-          workload_identity_provider: "projects/727473316245/locations/global/workloadIdentityPools/ci-cd-pool/providers/my-provider"
-          service_account: "iam-service-account@stevenkast.iam.gserviceaccount.com"
-
-      - name: Setup Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0
-        with:
-          project_id: ${{ env.PROJECT_ID }}
-
-      - name: Authorize Docker push
-        run: gcloud auth configure-docker
-
-      - name: Build and Push Container
-        run: |-
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }} ${{ github.ref_name }}
-          docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{ github.sha }}
 
       - name: Deploy to Cloud Run
         id: deploy
