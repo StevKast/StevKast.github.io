@@ -1,4 +1,4 @@
-<mat-toolbar>
+<!-- <mat-toolbar class="">
     <span routerLink="/home">Steven Kast</span>
     <span class="spacer"></span>
     <button mat-stroked-button aria-hidden="false" aria-label="Projects icon" routerLink="/projects">
@@ -13,8 +13,42 @@
         <mat-icon>description</mat-icon>
         Resume
     </button>
-    <button mat-stroked-button aria-hidden="false" aria-label="Server icon" routerLink="/server">
+    <button mat-stroked-button class="" aria-hidden="false" aria-label="Server icon" routerLink="/server">
         <mat-icon>dns</mat-icon>
         Servers
     </button>
+</mat-toolbar> -->
+
+<mat-toolbar class="">
+    <div class="w-full relative flex justify-between ">
+        <a class="inline-block mr-4 py-2">
+            Steven Kast
+        </a>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+    </div>
+
+    <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
+        <button mat-menu-item disabled class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Projects icon"
+            routerLink="/projects">
+            <mat-icon>construction</mat-icon>
+            Projects
+        </button>
+        <button mat-menu-item disabled class="px-3 py-2 menu-item" aria-hidden="false" aria-label="3D printer icon"
+            routerLink="/3dprinter">
+            <mat-icon>coffee_maker</mat-icon>
+            3D Printing
+        </button>
+        <button mat-menu-item class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Resume icon"
+            routerLink="/resume">
+            <mat-icon>description</mat-icon>
+            Resume
+        </button>
+        <button mat-menu-item disabled class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Server icon"
+            routerLink="/server">
+            <mat-icon>dns</mat-icon>
+            Servers
+        </button>
+    </mat-menu>
 </mat-toolbar>

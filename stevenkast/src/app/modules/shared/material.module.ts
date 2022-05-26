@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu'
 
 import { NgxSimpleIconsModule, typescript, csharp, angular, git, microsoftsqlserver, mongodb, html5, css3, cplusplus, java, dotnet, redux, express, docker, azuredevops, githubactions, kubernetes, materialdesign, bootstrap, github, linkedin } from 'ngx-simple-icons';
 
@@ -26,6 +27,7 @@ import { NgxSimpleIconsModule, typescript, csharp, angular, git, microsoftsqlser
     MatCardModule,
     MatDividerModule,
     MatListModule,
+    MatMenuModule,
     NgxSimpleIconsModule
   ]
 })

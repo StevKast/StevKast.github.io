@@ -1,28 +1,28 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
 @import '../../../../theming';
 
 .spacer {
     flex: 1 1 auto;
 }
 
-button {
-    margin-right: 1em;
+.nav-dropdown {
+    background-color: mat.get-color-from-palette($slate-palette, 800);
 }
 
-
-
-
-button:nth-last-child(4) {
-    @include customButtonColor($projects-color);
+button.menu-item:nth-last-child(4) {
+    @include customMenuItemColor($projects-color);
 }
 
-button:nth-last-child(3) {
-    @include customButtonColor($printer-color);
+button.menu-item:nth-last-child(3) {
+    @include customMenuItemColor($printer-color);
 }
 
-button:nth-last-child(2) {
-    @include customButtonColor($resume-color);
+button.menu-item:nth-last-child(2) {
+    @include customMenuItemColor($resume-color);
 }
 
-button:nth-last-child(1) {
-    @include customButtonColor($server-color);
+button.menu-item:nth-last-child(1) {
+    @include customMenuItemColor($server-color);
 }

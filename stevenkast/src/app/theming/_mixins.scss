@@ -20,3 +20,24 @@
     background-color: rgba($color, 0.025);
   }
 }
+
+@mixin customMenuItemColor($color) {
+
+  color: color.scale($color, $lightness: 80%);
+
+  mat-icon {
+    color: $color;
+  }
+
+  &:hover {
+    background-color: rgba($color, 0.025);
+  }
+
+  &:disabled {
+    color: color.change($color, $lightness: 60%, $saturation: 0%);
+  }
+
+  &:disabled mat-icon {
+    color: color.scale($color, $lightness: 60%, $saturation: -90%);
+  }
+}
