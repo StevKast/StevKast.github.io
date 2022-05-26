@@ -1,32 +1,28 @@
-<div class="content">
-    <div class="landing-button-tiles">
-        <div class="landing-button-row">
-            <button mat-stroked-button class="landing-button" routerLink="/projects">
-                <div>
-                    <mat-icon aria-hidden="false" aria-label="Projects icon">construction</mat-icon>
-                </div>
-                Projects
-            </button>
-            <button mat-stroked-button class="landing-button" routerLink="/3dprinter">
-                <div>
-                    <mat-icon aria-hidden="false" aria-label="3D printer icon">coffee_maker</mat-icon>
-                </div>
-                3D Printing
-            </button>
-        </div>
-        <div class="landing-button-row">
-            <button mat-stroked-button class="landing-button" routerLink="/resume">
-                <div>
-                    <mat-icon aria-hidden="false" aria-label="Resume icon">description</mat-icon>
-                </div>
-                Resume
-            </button>
-            <button mat-stroked-button class="landing-button" routerLink="/server">
-                <div>
-                    <mat-icon aria-hidden="false" aria-label="Server icon">dns</mat-icon>
-                </div>
-                Server Access
-            </button>
-        </div>
+<div class="m-10 md:absolute md:inset-32">
+    <div class="grid grid-cols-2 gap-4">
+        <button mat-stroked-button routerLink="/projects">
+            <div>
+                <mat-icon class="mt-5" aria-hidden="false" aria-label="Projects icon">construction</mat-icon>
+            </div>
+            <div class="mb-5">Projects</div>
+        </button>
+        <button mat-stroked-button routerLink="/3dprinter">
+            <div>
+                <mat-icon class="mt-5" aria-hidden="false" aria-label="3D printer icon">coffee_maker</mat-icon>
+            </div>
+            <div class="mb-5">3D Printing</div>
+        </button>
+        <button mat-stroked-button routerLink="/resume">
+            <div>
+                <mat-icon class="mt-5" aria-hidden="false" aria-label="Resume icon">description</mat-icon>
+            </div>
+            <div class="mb-5">Resume</div>
+        </button>
+        <button mat-stroked-button routerLink="/server">
+            <div>
+                <mat-icon class="mt-5" aria-hidden="false" aria-label="Server icon">dns</mat-icon>
+            </div>
+            <div class="mb-5">Server Access</div>
+        </button>
     </div>
 </div>

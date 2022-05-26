@@ -1,43 +1,20 @@
 @import '../../theming/mixins';
 @import '../../theming/palette';
 
-.content {
-    width: 100%;
-    position: relative;
+
+button:nth-child(1) {
+    @include customButtonColor($projects-color);
 }
 
-.landing-button-tiles {
-    width: 100%;
-}
-
-.landing-button-row {}
-
-.landing-button {
-    width: 25vw;
-    aspect-ratio: 16/9;
-    margin: 1rem;
-    left: 25vw;
-    transform: translate(0, 50%);
+button:nth-child(2) {
+    @include customButtonColor($printer-color);
 }
 
 
-
-.landing-button-row:nth-child(1n) {
-    .landing-button:nth-child(1n) {
-        @include customButtonColor($projects-color);
-    }
-
-    .landing-button:nth-child(2n) {
-        @include customButtonColor($printer-color);
-    }
+button:nth-child(3) {
+    @include customButtonColor($resume-color);
 }
 
-.landing-button-row:nth-child(2n) {
-    .landing-button:nth-child(1n) {
-        @include customButtonColor($resume-color);
-    }
-
-    .landing-button:nth-child(2n) {
-        @include customButtonColor($server-color);
-    }
+button:nth-child(4) {
+    @include customButtonColor($server-color);
 }
