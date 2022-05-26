@@ -12,19 +12,23 @@
             </a>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item id="socials">
-            <si icon="linkedin"></si>
-            <a href="https://www.linkedin.com/in/stevenkast/">
-                <button mat-stroked-button aria-hidden="false" aria-label="linkedin button">
-                    LinkedIn
-                </button>
-            </a>
-            <si icon="github"></si>
-            <a href="https://github.com/StevKast">
-                <button mat-stroked-button aria-hidden="false" aria-label="github button">
-                    Github
-                </button>
-            </a>
-        </mat-list-item>
+        <div class="flex justify-evenly mt-2">
+            <div class="flex items-centers">
+                <si icon="linkedin" class="my-auto p-1"></si>
+                <a href="https://www.linkedin.com/in/stevenkast/">
+                    <button mat-stroked-button aria-hidden="false" aria-label="linkedin button">
+                        LinkedIn
+                    </button>
+                </a>
+            </div>
+            <div class="flex items-centers">
+                <si icon="github" class="my-auto p-1"></si>
+                <a href="https://github.com/StevKast">
+                    <button mat-stroked-button aria-hidden="false" aria-label="github button">
+                        Github
+                    </button>
+                </a>
+            </div>
+        </div>
     </mat-list>
 </mat-card>

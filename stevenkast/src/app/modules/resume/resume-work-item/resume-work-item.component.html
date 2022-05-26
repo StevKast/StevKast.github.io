@@ -5,16 +5,16 @@
             <div>{{workItem.role}}</div>
             <div>{{workItem.location}} | {{workItem.date}}</div>
         </mat-card-subtitle>
-        <img mat-card-md-image src={{workItem.img}}>
+        <img class="object-contain w-1/4 float-right ml-3" src={{workItem.img}}>
     </mat-card-title-group>
     <mat-card-content>
-        <mat-list>
-            <div *ngFor="let bullet of workItem.bullets">
-                <mat-list-item>
+        <div class="">
+            <div *ngFor="let bullet of workItem.bullets; last as isLast" class="m-5 ">
+                <p>
                     {{bullet}}
-                </mat-list-item>
-                <mat-divider></mat-divider>
+                </p>
+                <mat-divider *ngIf="!isLast"></mat-divider>
             </div>
-        </mat-list>
+        </div>
     </mat-card-content>
 </mat-card>
