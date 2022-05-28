@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './modules/shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
-import { NavbarComponent } from './modules/shared';
 import { ResumeModule } from './modules/resume/resume.module';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { PrintingModule } from './modules/printing/printing.module';

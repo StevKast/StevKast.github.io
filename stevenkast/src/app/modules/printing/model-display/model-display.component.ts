@@ -1,11 +1,8 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import * as THREE from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
-import { Vector2, Vector3 } from 'three';
-
-// var jsm = require('three/examples/jsm');
 
 @Component({
   selector: 'app-model-display',
@@ -116,10 +113,6 @@ export class ModelDisplayComponent implements AfterViewInit {
     let modelMaterial: THREE.MeshStandardMaterial;
     let planeMaterial: THREE.MeshStandardMaterial;
     let bump = new THREE.TextureLoader().load('../../assets/3DPrintBumpMap.png');
-
-    let norm = new THREE.TextureLoader().load('.../../assets/aerial_beach_01_4k.gltf/textures/aerial_beach_01_nor_gl_4k.jpg');
-    let rough = new THREE.TextureLoader().load('../../assets/aerial_beach_01_4k.gltf/textures/aerial_beach_01_rough_4k.jpg');
-    let diff = new THREE.TextureLoader().load('../../assets/aerial_beach_01_4k.gltf/textures/aerial_beach_01_diff_4k.jpg');
 
     new RGBELoader()
       .load('../../assets/neon_photostudio_2k.hdr', texture => {
