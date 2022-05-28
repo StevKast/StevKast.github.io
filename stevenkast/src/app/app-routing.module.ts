@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'projects', redirectTo: '/soon' },
-  { path: '3dprinter', redirectTo: '/soon' },
+  { path: '3dprinter', component: PrintingComponent },
   { path: 'server', redirectTo: '/soon' },
   { path: 'soon', component: SoonComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },

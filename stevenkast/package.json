@@ -20,8 +20,11 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@types/three": "^0.140.0",
     "ngx-simple-icons": "^1.0.18",
     "rxjs": "~7.5.0",
+    "three": "^0.141.0",
+    "three/examples/jsm": "0.0.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
