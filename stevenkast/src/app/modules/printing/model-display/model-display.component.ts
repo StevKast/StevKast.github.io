@@ -81,11 +81,13 @@ export class ModelDisplayComponent implements AfterViewInit {
       requestAnimationFrame(renderLoop);
       // component.model.rotation.y += 0.01;
       // component.model.rotation.z += 0.01;
-      // const timer = Date.now() * 0.00001;
+      const timer = Date.now() * 0.00001;
+
+      component.model.rotation.z = Math.cos(timer) * 25;
 
       // component.camera.position.x = Math.cos(timer) * 250;
       // component.camera.position.z = Math.sin(timer) * 250;
-      component.camera.lookAt(new THREE.Vector3(0, 25, 0));
+      // component.camera.lookAt(new THREE.Vector3(0, 25, 0));
       component.renderer.render(component.scene, component.camera);
     }())
   }
