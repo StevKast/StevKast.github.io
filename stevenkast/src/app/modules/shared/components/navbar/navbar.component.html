@@ -1,33 +1,50 @@
-<mat-toolbar class="">
-    <div class="w-full relative flex justify-between ">
-        <a class="inline-block mr-4 py-2" routerLink="/home">
+<div class="navbar bg-neutral sticky top-0 z-50">
+    <div class="navbar-start">
+        <a routerLink="/home"
+            class="btn btn-ghost normal-case text-xl hover:bg-gradient-to-r hover:from-projects/40 hover:via-resume/40 hover:to-printer/40">
             Steven Kast
         </a>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-            <mat-icon>more_vert</mat-icon>
-        </button>
     </div>
-
-    <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
-        <button mat-menu-item disabled class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Projects icon"
-            routerLink="/projects">
-            <mat-icon>construction</mat-icon>
-            Projects
-        </button>
-        <button mat-menu-item disabled class="px-3 py-2 menu-item" aria-hidden="false" aria-label="3D printer icon"
-            routerLink="/3dprinter">
-            <mat-icon>coffee_maker</mat-icon>
-            3D Printing
-        </button>
-        <button mat-menu-item class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Resume icon"
-            routerLink="/resume">
-            <mat-icon>description</mat-icon>
-            Resume
-        </button>
-        <button mat-menu-item disabled class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Server icon"
-            routerLink="/server">
-            <mat-icon>dns</mat-icon>
-            Servers
-        </button>
-    </mat-menu>
-</mat-toolbar>
+    <div class="navbar-end">
+        <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-neutral rounded-box w-52">
+                <li class="text-projects-text hover:bg-projects/10">
+                    <a routerLink="/projects" onclick="document.activeElement.blur()">
+                        <mat-icon>construction</mat-icon>
+                        Projects
+                    </a>
+                </li>
+                <li class="text-printer/80 hover:bg-printer/10">
+                    <a routerLink="/3dprinter" onclick="document.activeElement.blur()">
+                        <mat-icon>coffee_maker</mat-icon>
+                        3D Printing
+                    </a>
+                </li>
+                <li class="text-resume/80 hover:bg-resume/10">
+                    <a routerLink="/resume" onclick="document.activeElement.blur()">
+                        <mat-icon>description</mat-icon>
+                        Resume
+                    </a>
+                </li>
+                <li class="text-server/80 hover:bg-server/10">
+                    <a routerLink="/server" onclick="document.activeElement.blur()">
+                        <mat-icon>dns</mat-icon>
+                        Servers
+                    </a>
+                </li>
+                <li class="">
+                    <a routerLink="/home" onclick="document.activeElement.blur()">
+                        <mat-icon>home</mat-icon>
+                        Home
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
