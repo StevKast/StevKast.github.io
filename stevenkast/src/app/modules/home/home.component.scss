@@ -1,0 +1,20 @@
+@import '../../theming/mixins';
+@import '../../theming/palette';
+
+
+button:nth-child(1) {
+    @include customButtonColor($projects-color);
+}
+
+button:nth-child(2) {
+    @include customButtonColor($printer-color);
+}
+
+
+button:nth-child(3) {
+    @include customButtonColor($resume-color);
+}
+
+button:nth-child(4) {
+    @include customButtonColor($server-color);
+}
