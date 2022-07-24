@@ -17,15 +17,15 @@ module.exports = {
   daisyui: {
     themes: [{
       mytheme: {
-        "primary": "#6419E6",
-        "secondary": "#D926A9",
-        "accent": "#1FB2A6",
+        "primary": "#818cf8",
+        "secondary": "#5eead4",
+        "accent": "#60a5fa",
         "neutral": "#4a4a55",
         "base-100": "#282832",
         "info": "#3ABFF8",
-        "success": "#36D399",
-        "warning": "#FBBD23",
-        "error": "#F87272",
+        "success": "#059669",
+        "warning": "#fde047",
+        "error": "#f87171",
       },
     }
     ],
