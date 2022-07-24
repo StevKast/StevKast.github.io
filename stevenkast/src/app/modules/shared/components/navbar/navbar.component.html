@@ -1,0 +1,50 @@
+<div class="navbar bg-neutral sticky top-0 z-50">
+    <div class="navbar-start">
+        <a routerLink="/home"
+            class="btn btn-ghost normal-case text-xl hover:bg-gradient-to-r hover:from-projects/40 hover:via-resume/40 hover:to-printer/40">
+            Steven Kast
+        </a>
+    </div>
+    <div class="navbar-end">
+        <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-neutral rounded-box w-52">
+                <li class="text-projects-text hover:bg-projects/10">
+                    <a routerLink="/projects" onclick="document.activeElement.blur()">
+                        <mat-icon>construction</mat-icon>
+                        Projects
+                    </a>
+                </li>
+                <li class="text-printer/80 hover:bg-printer/10">
+                    <a routerLink="/3dprinter" onclick="document.activeElement.blur()">
+                        <mat-icon>coffee_maker</mat-icon>
+                        3D Printing
+                    </a>
+                </li>
+                <li class="text-resume/80 hover:bg-resume/10">
+                    <a routerLink="/resume" onclick="document.activeElement.blur()">
+                        <mat-icon>description</mat-icon>
+                        Resume
+                    </a>
+                </li>
+                <li class="text-server/80 hover:bg-server/10">
+                    <a routerLink="/server" onclick="document.activeElement.blur()">
+                        <mat-icon>dns</mat-icon>
+                        Servers
+                    </a>
+                </li>
+                <li class="">
+                    <a routerLink="/home" onclick="document.activeElement.blur()">
+                        <mat-icon>home</mat-icon>
+                        Home
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<mat-card class="resume-card">
+    <mat-card-title-group>
+        <mat-card-title>{{workItem.name}}</mat-card-title>
+        <mat-card-subtitle>
+            <div>{{workItem.role}}</div>
+            <div>{{workItem.location}} | {{workItem.date}}</div>
+        </mat-card-subtitle>
+        <img class="object-contain w-1/4 float-right ml-3" src={{workItem.img}}>
+    </mat-card-title-group>
+    <mat-card-content>
+        <div class="">
+            <div *ngFor="let bullet of workItem.bullets; last as isLast" class="m-5 ">
+                <p>
+                    {{bullet}}
+                </p>
+                <mat-divider *ngIf="!isLast"></mat-divider>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,1 @@
+export { WorkPlace } from './workplace';

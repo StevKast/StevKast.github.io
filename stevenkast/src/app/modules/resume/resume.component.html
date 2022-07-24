@@ -1,0 +1,10 @@
+<div class="resume-content">
+    <div class="grid grid-flow-row md:grid-cols-2 md:gap-2 md:mx-5">
+        <app-resume-contact class="md:order-2"></app-resume-contact>
+        <app-resume-school class="md:order-3"></app-resume-school>
+        <div class="md:order-1 md:row-span-3">
+            <app-resume-work-item *ngFor="let item of workItems" [workItem]="item"></app-resume-work-item>
+        </div>
+        <app-resume-tech-item class="md:order-4"></app-resume-tech-item>
+    </div>
+</div>
